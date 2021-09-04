@@ -1,5 +1,6 @@
-*~
+_site/
 .sass-cache/
-_site
-google-analytics.js
-.env
+.jekyll-metadata
+Gemfile.lock
+*.gem
+.jekyll-cache
