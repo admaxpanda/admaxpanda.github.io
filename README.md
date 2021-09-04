@@ -1,71 +1,81 @@
-# Forty - Jekyll Theme
+Materialize - jekyll
+==============
 
-A Jekyll version of the "Forty" theme by [HTML5 UP](https://html5up.net/).  
 
-![Forty Theme](assets/images/forty.jpg "Forty Theme")
+## Introducton
 
-# How to Use
+This jekyll theme is based on [materialize](http://materializecss.com).
+(NOTE: this theme is only made for my own, but you can modify it freely.)
 
-For those unfamiliar with how Jekyll works, check out [jekyllrb.com](https://jekyllrb.com/) for all the details, 
-or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontmatter/), [writing posts](https://jekyllrb.com/docs/posts/), 
-and [creating pages](https://jekyllrb.com/docs/pages/).
+[Open demo](https://mumuxme.github.io/materialize-jekyll/)
 
-- **GitLab**: Simply fork this repository and start editing the `_config.yml` file!  
-- **GitHub**:
-1. Fork this repository.
-2. Set up a Personal Access Token ([instructions](https://jekyllrb.com/docs/continuous-integration/github-actions/#providing-permissions)) named `JEKYLL_PAT`.
-3. The GitHub Actions workflow should have run when you forked the repo. This initial run will fail because of the missing `JEKYLL_PAT` secret not being set. Got to the workflow run and click "re-run all workflows". This time it should succeed.
-4. Start editing the `_config.yml` file!
 
-> NOTE: GitHub Actions is required to deploy to GitHub Pages because GitHub [refuses to update their version of Jekyll](https://github.com/github/pages-gem/issues/651).
+## Getting start
 
-# Added Features
+#### Install
 
-* **[Formspree.io](https://formspree.io/) contact form integration** - just add your email to the `_config.yml` and it works!
-* Use `_config.yml` to **set whether the homepage tiles should pull pages or posts**, as well as how many to display.
-* Add your **social profiles** easily in `_config.yml`. Only social profiles buttons you enter in `config.yml` show up on the site footer!
-* Set **featured images** in front matter.
-
-# Credits
-
-Original README from HTML5 UP:
+You may need some dev headers, for debian/linux, just run:
 
 ```
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-
-
-This is Forty, my latest and greatest addition to HTML5 UP and, per its incredibly
-creative name, my 40th (woohoo)! It's built around a grid of "image tiles" that are
-set up to smoothly transition to secondary landing pages (for which a separate page
-template is provided), and includes a number of neat effects (check out the menu!),
-extra features, and all the usual stuff you'd expect. Hope you dig it!
-
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = not included)
-
-AJ
-aj@lkn.io | @ajlkn
-
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
-
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		background-size polyfill (github.com/louisremi)
-		Misc. Sass functions (@HugoGiraudel)
-		Respond.js (j.mp/respondjs)
-		Skel (skel.io)
+# apt-get install liblzma-dev zlib1g-dev
 ```
 
-Repository [Jekyll logo](https://github.com/jekyll/brand) icon licensed under a [Creative Commons Attribution 4.0 International License](http://choosealicense.com/licenses/cc-by-4.0/).
+(Other dependencies may also needed.)
+
+```
+$ git clone https://github.com/mumuxme/materialize-jekyll
+$ cd materialize-jekyll
+$ bundle install
+```
+
+#### Run
+
+1. Modify `_config.yml`, `about.md` and other(whatever you need).
+2. You can add a `favicon.ico` file in the project root directory.
+3. If you want to use google analytics, add your `google-analytics.js` into `js` directory.
+
+Then:
+
+```
+$ bundle exec jekyll s
+
+# or start with draft
+$ bundle exec jekyll s --drafts
+```
+
+## Or start with docker
+
+```
+cd materialize-jekyll
+
+# export GEM_MIRROR=mirror.https://rubygems.org
+export GEM_MIRROR='Your-ruby-gem-mirror'
+
+make build
+make run
+```
+
+
+## Other
+
+#### Emoji
+
+You can use GitHub-flavored emoji. See [emoji cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/)
+
+#### TODO
+
+- Add comment. (???)
+- Add options to choose self host or cdn.
+
+
+## License
+
+[GNU GPL v3](http://www.gnu.org/licenses/).
+
+Others:
+
+- jquery: <https://jquery.com>
+- materialize: <http://materializecss.com>
+- material-scrolltop: [bartholomej/material-scrolltop](https://github.com/bartholomej/material-scrolltop)
+- material design icon: [Templarian/MaterialDesign](https://github.com/Templarian/MaterialDesign) or <https://materialdesignicons.com/getting-started>
+- GitHub-flavored emoji plugin: [jemoji](https://github.com/jekyll/jemoji)
