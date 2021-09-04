@@ -1,4 +1,5 @@
+*~
+.sass-cache/
 _site
-.sass-cache
-.jekyll-metadata
-.idea
+google-analytics.js
+.env

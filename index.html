@@ -1,66 +1,56 @@
 ---
 layout: default
-menu: home
-css: ['index.css', 'sidebar-popular-repo.css']
 ---
-<section class="jumbotron">
-    <div class="container">
-        <h1>{{ site.title }}</h1>
-        <div id="jumbotron-meta-info">
-            {% if site.location %}
-            <span class="meta-info">
-                <span class="octicon octicon-location"></span>
-                {{ site.location }}
-            </span> {% endif %}
-            {% if site.company %}
-            <span class="meta-info hvr-grow">
-                <span class="octicon octicon-organization"></span>
-                <a href="{{ site.company_url }}" target="_blank">{{ site.company }}</a>
-            </span> {% endif %}
-            {% if site.github_username %}
-            <span class="meta-info hvr-grow">
-                <span class="octicon octicon-mark-github"></span>
-                <a href="{{ site.github_url }}" target="_blank">@{{ site.github_username }}</a>
-            </span> {% endif %}
+
+<div class="home container">
+
+  <div class="page-heading">
+    <ul class="collapsible popout" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header favo"><i class="mdi mdi-weather-windy-variant"></i>{{ site.favo }}<i class="mdi mdi-pin right pink-text hide-on-small-only"></i></div>
+        <div class="collapsible-body"><p>{{ site.descrpt }}</p></div>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="post-list">
+    <!-- This loops through the paginated posts -->
+    {% for post in paginator.posts %}
+      <li class="card-panel hoverable">
+        <span class="grey-text right">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+
+        <button data-target="{{ post.id | remove: '%' | replace: '/', '_' }}" class="waves-effect waves-light btn modal-trigger" style="padding: 0 1.2rem;">overview<i class="mdi mdi-send right"></i></button>
+
+        <div id="{{ post.id | remove: '%' | replace: '/', '_' }}" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.excerpt }}</p>
+          </div>
+          <div class="modal-footer">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="waves-effect btn-flat grey-text text-darken-4 right">read more</a>
+            <a class="modal-action modal-close waves-effect btn-flat grey-text text-darken-4 left">close</a>
+          </div>
         </div>
-    </div>
-</section>
-<section class="content container">
+      </li>
+    {% endfor %}
+  </ul>
 
-    <div class="row">
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="waves-effect waves-light btn cyan left"><i class="mdi mdi-chevron-left white-text"></i></a>
+    {% else %}
+    <span class="btn disabled left"><i class="mdi mdi-chevron-left white-text"></i></span>
+    {% endif %}
 
-        <!-- Post List -->
-        <div class="col-md-8">
+    <div class="waves-effect btn-flat lower-case page">Page: <span class="pink-text">{{ paginator.page }}</span> of {{ paginator.total_pages }}</div>
 
-            <ol class="post-list">
-                {% for post in paginator.posts %}
-                <li class="post-list-item">
-                    <h2 class="post-list-title">
-                        <a class="hvr-underline-from-center" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-                    </h2>
-                    <p class="post-list-description">
-                        {{ post.excerpt | strip_html | strip }}
-                    </p>
-                    <p class="post-list-meta">
-                        <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
-                    </p>
-                </li>
-                {% endfor %}
-            </ol>
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="waves-effect waves-light btn cyan right"><i class="mdi mdi-chevron-right white-text"></i></a>
+    {% else %}
+    <span class="btn disabled right"><i class="mdi mdi-chevron-right white-text"></i></a></li>
+    {% endif %}
+  </div>
 
-            <!-- Pagination -->
-            {% include pagination.html %}
-
-            <!-- Comments -->
-            {% include disqus-comments.html %}
-
-        </div>
-
-        <div class="col-md-4">
-            {% include sidebar-popular-repo.html %}
-        </div>
-
-    </div>
-
-</section>
-
+</div>

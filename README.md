@@ -1,139 +1,81 @@
-# Yummy Jekyll Theme
+Materialize - jekyll
+==============
 
-A Simple, Bootstrap Based Theme. Especially for developers who like to show their projects on website and like to take notes. There are also some magical features to discover. 
 
-## [Live Demo](http://dongchuan.github.io/)
+## Introducton
 
-Open issues if you find bugs or even have trouble installing jekyll or dependencies. :D
+This jekyll theme is based on [materialize](http://materializecss.com).
+(NOTE: this theme is only made for my own, but you can modify it freely.)
 
-Or contact: dongchuan55@gmail.com
+[Open demo](https://mumuxme.github.io/materialize-jekyll/)
 
-> Strongly suggest to fork and change project name to create your GitHub Pages instead of downloading it directly. Because in the future, I will develop many funny modules like 'footprint' to show your world wide trip. Could be easier to merge new features in the future.
 
-## Notable Features
+## Getting start
 
-* Compatible with Jekyll 3.x and GitHub Pages
-* Based on Bootstrap
-* [Github Module](http://dongchuan.github.io/open-source) to show your popular projects in a single page and on sidebar automatically. (Datas are retreived by github metadata instead of by api calls, so no delay) 
-* [Post Module](http://dongchuan.github.io/blog) to show all your posts with timeline
-* [Bookmark Module](http://dongchuan.github.io/bookmark) to establish a quick mark about all libs/tools/books you like to use.
-* [Post Navigation Module](http://dongchuan.github.io/css/2016/04/22/CSS-Animation.html) to generat a quick directory of your post by titles/subtitles automatically.
-* Support [Disqus Comment](https://disqus.com/home/explore/)
-* Support [Google Analytics](https://analytics.google.com/analytics/web/)
+#### Install
 
-Features in future:
-* A Footprint module to show all your travel around the world
-* Feature to share. (Facebook, twitter, evernote and so on)
-* (Not sure) A embeded todo list. (Not sure) to travel, to complete, to do for your parents, etc. To do in life!
-* Creative ideas to discuss with you :P
-
-## Install and setup
-
-Before using it, you may need [Bower](http://bower.io/) and [Bundler](http://bundler.io/) on your local to install dependencies.
-
-1. Fork code and clone
-2. Run `bower install` to install all dependencies in [bower.json](https://github.com/DONGChuan/DONGChuan.github.io/blob/master/bower.json)
-3. Run `bundle install` to install all dependencies in [Gemfile](https://github.com/DONGChuan/DONGChuan.github.io/blob/master/Gemfile)
-4. Update `_config.yml` with your own settings.
-5. Add posts in `/_posts`
-6. Commit to your own Username.github.io repository.
-7. Then come back to star this theme!
-
-> When install dependencies by bundler or gem, you may have some errors depending on your environment.
-
-> Error about `json`. Check response of [Massimo Fazzolari on Stackoverflow](http://stackoverflow.com/questions/8100891/the-json-native-gem-requires-installed-build-tools) to quick fix your problem. (Please also use latest version instead of 1.9.3 mentioned in the response)
-  
-> Error about `jekyll-paginate`. Please check [here](http://stackoverflow.com/questions/35401566/dont-have-jekyll-paginate-or-one-of-its-dependencies-installed)
-
-> Error about `SSL_connect`. Please check [here](http://stackoverflow.com/questions/15305350/gem-install-fails-with-openssl-failure) and [here](http://railsapps.github.io/openssl-certificate-verify-failed.html)
-
-> For the moment, when you test on your local, you need to keep internet connection. Bug will be fixed soon.
-
-## How to use
-
-#### Create a new post
-
-Create a `.md` file inside `_posts` folder.
-
-Name the file according to the standard jekyll format.
+You may need some dev headers, for debian/linux, just run:
 
 ```
-2016-01-19-i-love-yummy.md
+# apt-get install liblzma-dev zlib1g-dev
 ```
 
-Write the Front Matter and content in the file.
+(Other dependencies may also needed.)
 
 ```
----
-layout: post
-title: Post title
-category: Category
-tags: [tag1, tag2]
----
+$ git clone https://github.com/mumuxme/materialize-jekyll
+$ cd materialize-jekyll
+$ bundle install
 ```
 
-Please find examples [here](https://github.com/DONGChuan/DONGChuan.github.io/tree/master/_posts)
+#### Run
 
-> Jekyll supports different structure of repository. You could just create as many folders as you want under _posts. Then jekyll will look through all folders/subfolders to find your posts. So cool, right? :D
+1. Modify `_config.yml`, `about.md` and other(whatever you need).
+2. You can add a `favicon.ico` file in the project root directory.
+3. If you want to use google analytics, add your `google-analytics.js` into `js` directory.
 
-#### [Post Navigation Module](http://dongchuan.github.io/css/2016/04/22/CSS-Animation.html)
-
-When writing post, please always follow this format:
-
-```
-Description about this post, blablabla
-
-## Title A
-
-### Title A-1
-
-### Title A-2
-
-## Title B
-
-### Title B-1
+Then:
 
 ```
+$ bundle exec jekyll s
 
-So, Title A, A-1, A-2, Title B, B-1 will be detected and created as a directory
+# or start with draft
+$ bundle exec jekyll s --drafts
+```
 
-For example, [a demo post](https://github.com/DONGChuan/DONGChuan.github.io/edit/master/_posts/2016-04-22-CSS-Animation.md)
+## Or start with docker
 
-But if you do not like it or your post is quite short. You want to hide this navigation to make your post occupy your full screen. You just need to set **no-post-nav:true** in the Front Matter of the post where you want to hide this feature :D
+```
+cd materialize-jekyll
 
-#### [Github Module](http://dongchuan.github.io/open-source)
+# export GEM_MIRROR=mirror.https://rubygems.org
+export GEM_MIRROR='Your-ruby-gem-mirror'
 
-This module will get automatically all your repository information from github. But to test on your local, you must keep internet connection. 
-In the future, it will also show the repositories you contributed a lot and the ones of your organization.
+make build
+make run
+```
 
-#### [Bookmark Module](http://dongchuan.github.io/bookmark)
 
-To add new marks, you only need to edit [bookmark.md](https://github.com/DONGChuan/Yummy-Jekyll/blob/master/bookmark.md).
+## Other
 
-#### [Customize About Page](http://dongchuan.github.io/about)
+#### Emoji
 
-Feel free to customize about.me page to show yourself. You only need to modify [about.md](https://github.com/DONGChuan/Yummy-Jekyll/blob/master/about.md) and [about.html](https://github.com/DONGChuan/Yummy-Jekyll/blob/master/_includes/about.html)
+You can use GitHub-flavored emoji. See [emoji cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/)
 
-## ToDo
+#### TODO
 
-- [ ] List posts by a specified tag
-- [ ] New module FootPrint to show your world around trips
-- [ ] Show projects from your orgnization on github. (Siderbar, in open-source page)
-- [ ] To fix bug - could only test on local with internet connected.
+- Add comment. (???)
+- Add options to choose self host or cdn.
 
-## Contributor
-
-* [DONGChuan](https://github.com/DONGChuan)
-* [Mojtaba Koosej](https://github.com/mkoosej)
-* [shahsaurabh0605](https://github.com/shahsaurabh0605)
-* [Z-Beatles](http://www.waynechu.cn/)
-* [LM450N](https://github.com/LM450N)
-* [XhmikosR](https://github.com/XhmikosR)
 
 ## License
 
-The Apache License 2.0
+[GNU GPL v3](http://www.gnu.org/licenses/).
 
-Copyright (c) 2016 DONG Chuan
+Others:
 
-Check [LICENSE](https://github.com/DONGChuan/DONGChuan.github.io/blob/master/LICENSE) file and [official website](http://www.apache.org/licenses/LICENSE-2.0) for details
+- jquery: <https://jquery.com>
+- materialize: <http://materializecss.com>
+- material-scrolltop: [bartholomej/material-scrolltop](https://github.com/bartholomej/material-scrolltop)
+- material design icon: [Templarian/MaterialDesign](https://github.com/Templarian/MaterialDesign) or <https://materialdesignicons.com/getting-started>
+- GitHub-flavored emoji plugin: [jemoji](https://github.com/jekyll/jemoji)

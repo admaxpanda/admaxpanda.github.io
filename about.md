@@ -1,19 +1,34 @@
 ---
 layout: page
-title: About Me
-menu: about
-subtitle:   <h3>Download My CV</h3>
-            <a role="button" class="btn btn-primary hvr-grow-shadow" href="/assets/files/CV_Chuan_Dong_FR.pdf" target="_blanks">
-                <span class="flag-icon flag-icon-bl"></span> Français
-            </a>
-            <a role="button" class="btn btn-primary hvr-grow-shadow" href="/assets/files/CV_Chuan_Dong_FR.pdf" target="_blanks">
-                <span class="flag-icon flag-icon-gb"></span> English
-            </a>
-            <a role="button" class="btn btn-primary hvr-grow-shadow" href="/assets/files/CV_Chuan_Dong_FR.pdf" target="_blanks">
-                <span class="flag-icon flag-icon-cn"></span> 中文
-            </a>
-                            
-css: ['about.css', 'sidebar-popular-repo.css', '../../bower_components/flag-icon-css/css/flag-icon.min.css']
+title: About
+permalink: /about/
 ---
 
-{% include about.html %}
+#### Tagline
+
+Your tagline.
+
+#### Introduction
+
+Introduce yourself.
+
+#### This theme
+
+This [jekyll](https://jekyllrb.com) theme is based on [materialize](http://materializecss.com). For more detail, you can view the github repo: [mumuxme/materialize-jekyll](https://github.com/mumuxme/materialize-jekyll)
+
+
+#### License
+
+Copyright&nbsp;&copy;&nbsp;{{ site.author }}
+
+- - -
+
+If any <b>question</b>, please send an <b>email</b> to me or just open an <b>issue</b> on the github repository. 
+
+As for all articles(except reference) are under [CC Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/), you are free to <b>share</b> and <b>adapt</b> for any purpose.
+
+- - -
+
+#### Personal information
+
+Email: {{ site.email }}
