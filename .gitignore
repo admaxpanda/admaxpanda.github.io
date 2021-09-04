@@ -1,2 +1,5 @@
+*~
+.sass-cache/
 _site
-.sass-cache
+google-analytics.js
+.env

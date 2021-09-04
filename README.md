@@ -1,65 +1,81 @@
-block-log
-=========
+Materialize - jekyll
+==============
 
-![A screenshot of block-log theme.](/images/block-log.png)
 
-| [Live demo](https://anandu.net/demo/block-log/) | [Github Repo](https://github.com/anandubajith/block-log) | [Download zip](https://github.com/anandubajith/block-log/archive/master.zip) |
-|-----------|-------------|---------------|
+## Introducton
 
-Setting up
-====================
-To start you own blog, simply git clone the repository on github. You could also press the "fork" button on github.
+This jekyll theme is based on [materialize](http://materializecss.com).
+(NOTE: this theme is only made for my own, but you can modify it freely.)
+
+[Open demo](https://mumuxme.github.io/materialize-jekyll/)
+
+
+## Getting start
+
+#### Install
+
+You may need some dev headers, for debian/linux, just run:
+
 ```
-git clone https://github.com/anandubajith/block-logs.git
-```
-Then you will need to edit the `_config.yml` file at the root of repository.
-
-To add your own posts, add a file to the `_posts` directory which has the name `year-month-day-title.md`.
-*Note - the file does not have to be markdown.*
-
-To publish the post, just `git push` it to your own github repo and your set!
-
-Things to change on `_config.yml`
-====================
-There is a config file at the root called `_config.yml`. By Default it looks like:
-```
-title:        "Block-Log"
-description:  "Write an awesome description for your blog."
-baseurl:      "" # the subpath of your site, e.g. /blog/
-url:          "http://yourdomain.com" # the base hostname & protocol for your site
-permalink:    /:year/:title
-github:       "yourusername"
-twitter:      "yourusername"
-email:        "mail@example.com"
-disqus-id:    "example" #leave blank if you dont want comments.
-markdown:     kramdown
-sass:
-    style: :compressed
+# apt-get install liblzma-dev zlib1g-dev
 ```
 
-For more information on Jekyll, visit their [wiki on github](https://github.com/mojombo/jekyll/wiki).
-For more information on github pages: [http://pages.github.com](http://pages.github.com).
+(Other dependencies may also needed.)
 
-License
-====================
-### The MIT License (MIT)
+```
+$ git clone https://github.com/mumuxme/materialize-jekyll
+$ cd materialize-jekyll
+$ bundle install
+```
 
-Copyright (c) 2015 Anandu B Ajith
+#### Run
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Modify `_config.yml`, `about.md` and other(whatever you need).
+2. You can add a `favicon.ico` file in the project root directory.
+3. If you want to use google analytics, add your `google-analytics.js` into `js` directory.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Then:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+```
+$ bundle exec jekyll s
+
+# or start with draft
+$ bundle exec jekyll s --drafts
+```
+
+## Or start with docker
+
+```
+cd materialize-jekyll
+
+# export GEM_MIRROR=mirror.https://rubygems.org
+export GEM_MIRROR='Your-ruby-gem-mirror'
+
+make build
+make run
+```
+
+
+## Other
+
+#### Emoji
+
+You can use GitHub-flavored emoji. See [emoji cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/)
+
+#### TODO
+
+- Add comment. (???)
+- Add options to choose self host or cdn.
+
+
+## License
+
+[GNU GPL v3](http://www.gnu.org/licenses/).
+
+Others:
+
+- jquery: <https://jquery.com>
+- materialize: <http://materializecss.com>
+- material-scrolltop: [bartholomej/material-scrolltop](https://github.com/bartholomej/material-scrolltop)
+- material design icon: [Templarian/MaterialDesign](https://github.com/Templarian/MaterialDesign) or <https://materialdesignicons.com/getting-started>
+- GitHub-flavored emoji plugin: [jemoji](https://github.com/jekyll/jemoji)
