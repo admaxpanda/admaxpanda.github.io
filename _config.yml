@@ -1,13 +1,13 @@
 # Site settings
 
-author: Yourname
-email: example@email.com
-twitter_username: twitter
-github_username:  github
-googleplus_username: google
+author: MaxPanda
+email: admaxpanda@outlook.com
+twitter_username: admaxpanda
+github_username:  admaxpanda
+googleplus_username: admaxpanda
 
-head-title: Your blog
-title: Your blog
+head-title: 亚特兰蒂斯联盟图书馆
+title: 亚特兰蒂斯联盟图书馆
 
 baseurl: ""    # the subpath of your site, "/blog"
 url: ""
@@ -56,7 +56,7 @@ head-theme-color: "#ffa726"     # MUST in hex format, may the same as header-col
 
 footer-color: "orange lighten-1"
 footer-button-color: "orange lighten-2"
-footer-link-color: "red-text text-accent-1"
+footer-link-color: "blue-text text-accent-1"
 
 share-button-color: "blue"
 share-button-small-color: ""
