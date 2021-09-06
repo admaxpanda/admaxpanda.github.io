@@ -5008,7 +5008,7 @@ footer.page-footer .footer-copyright {
 .btn-large {
     text-decoration: none;
     color: #fff;
-    background-color: #c0ca33;
+    background-color: #d4e157;
     text-align: center;
     letter-spacing: .5px;
     transition: .2s ease-out;
@@ -5017,7 +5017,7 @@ footer.page-footer .footer-copyright {
 
 .btn:hover,
 .btn-large:hover {
-    background-color: #2bbbad
+    background-color: #dce775
 }
 
 .btn-floating {
@@ -6995,7 +6995,7 @@ input[type=range]:focus::-ms-fill-upper {
 .side-nav a.btn:hover,
 .side-nav a.btn-large:hover,
 .side-nav a.btn-large:hover {
-    background-color: #2bbbad
+    background-color: #dce775
 }
 
 .side-nav a.btn-floating:hover {
