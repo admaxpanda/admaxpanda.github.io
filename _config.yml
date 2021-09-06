@@ -51,11 +51,11 @@ gems: [jekyll-paginate, jekyll-last-modified-at, jemoji]
 
 # Color
 # All css class, see: http://materializecss.com/color.html
-header-color: "orange lighten-1"
-head-theme-color: "#ffa726"     # MUST in hex format, may the same as header-color. This color is for android chrome browser.
+header-color: "orange lighten-3"
+head-theme-color: "#ffcc80"     # MUST in hex format, may the same as header-color. This color is for android chrome browser.
 
-footer-color: "orange lighten-1"
-footer-button-color: "orange lighten-2"
+footer-color: "orange lighten-3"
+footer-button-color: "orange lighten-4"
 footer-link-color: "blue-text text-accent-1"
 
 share-button-color: "blue"
