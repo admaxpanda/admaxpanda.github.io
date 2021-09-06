@@ -2,8 +2,18 @@
 
 <!-- desktop and tablet-->
 <div class="hide-on-small-only">
+  <div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
   <i class="mdi mdi-share-variant material-icons small grey-text waves-effect waves-light"></i>
-
   <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url | prepend: site.baseurl }}" class="waves-effect waves-light btn {{ site.share-button-color }} tooltipped" data-position="bottom" data-delay="20" data-tooltip="Share on Google+"><i class="mdi mdi-google-plus white-text"></i></a>
   <a href="https://twitter.com/intent/tweet?text={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&url={{ site.url }}{{ page.url | prepend: site.baseurl }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" class="waves-effect waves-light btn {{ site.share-button-color }} tooltipped" data-position="bottom" data-delay="20" data-tooltip="Share on Twitter"><i class="mdi mdi-twitter white-text"></i></a>
   <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url | prepend: site.baseurl }}" class="waves-effect waves-light btn {{ site.share-button-color }} tooltipped" data-position="bottom" data-delay="20" data-tooltip="Share on Facebook"><i class="mdi mdi-facebook white-text"></i></a>
