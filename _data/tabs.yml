@@ -1,12 +1,32 @@
 # **NOTE**
 # 1. Empty strings are truthy.
 
-- id: tab-test
-  name: test
-  fp: tab/test.html
-  disabled: false
+- id: tab-arts
+  name: 画作
+  fp: tab/arts.html
+  disabled: true
 
-- id: tab-test1
-  name: diasble-test
-  fp: tab/test1.html
+- id: tab-novel
+  name: 小说
+  fp: tab/novel.html
+  disabled: true
+
+- id: tab-code
+  name: 代码
+  fp: tab/code.html
+  disabled: true
+
+- id: tab-design
+  name: 构思
+  fp: tab/design.html
+  disabled: true
+
+- id: tab-poem
+  name: 诗篇
+  fp: tab/poem.html
+  disabled: true
+
+- id: tab-discussion
+  name: 杂谈
+  fp: tab/discussion.html
   disabled: true
