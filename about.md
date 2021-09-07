@@ -1,25 +1,15 @@
 ---
 layout: page
-title: About
+title: 简介
 permalink: /about/
 ---
 
-#### Tagline
+#### 临时的简介
 
-Your tagline.
-
-#### Introduction
-
-Introduce yourself.
-
-#### This theme
-
-This [jekyll](https://jekyllrb.com) theme is based on [materialize](http://materializecss.com). For more detail, you can view the github repo: [mumuxme/materialize-jekyll](https://github.com/mumuxme/materialize-jekyll)
-
-
-#### License
-
-Copyright&nbsp;&copy;&nbsp;{{ site.author }}
+哈尔滨工业大学SE专业
+B站咸鱼UP
+梦想是成为世界上最棒的游戏制作人（如果可以的话也想成为最棒的文学家和漫画家）
+耿直木讷不会说话
 
 - - -
 
