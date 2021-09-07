@@ -11,6 +11,7 @@
         <div class="col l4 s12 right">
           <h5 class="white-text">相关链接</h5>
           <ul>
+          <div class="col">
             {% if site.github_username %}
             <li><a href="https://github.com/{{ site.github_username }}" class="white-text text-lighten-3 btn waves-effect waves-light {{ site.footer-button-color }} lighten-3"><i class="mdi mdi-github"></i></a></li>
             {% endif %}
@@ -20,8 +21,11 @@
             {% if site.twitter_username %}
             <li><a href="https://twitter.com/{{ site.twitter_username }}" class="white-text text-lighten-3 btn waves-effect waves-light {{ site.footer-button-color }} lighten-3"><i class="mdi mdi-twitter"></i></a></li>
             {% endif %}
+          </div>
+          <div class="col">
             <li><a href="https://space.bilibili.com/1398477" class="white-text text-lighten-3 btn waves-effect waves-light white lighten-3"><img src="https://www.bilibili.com/favicon.ico" height="18.7"></a></li>
             <li><a href="https://hexadecimaaal.github.io/" class="white-text text-lighten-3 btn waves-effect waves-light white lighten-3"><img src="https://hexadecimaaal.github.io/favicon.ico" height="18.7"></a></li>
+          </div>
           </ul>
         </div>
       </div>
