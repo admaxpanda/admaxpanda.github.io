@@ -30,3 +30,8 @@
   name: 杂谈
   fp: tab/discussion.html
   disabled: true
+
+- id: tab-daily
+  name: 日常
+  fp: tab/daily.html
+  disabled: true
