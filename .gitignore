@@ -1,5 +1,12 @@
-*~
-.sass-cache/
+# output
 _site
-google-analytics.js
-.env
+
+# cache
+.sass-cache
+.jekyll-metadata
+
+# gem lock file
+Gemfile.lock
+
+# Mac OSX
+.DS_Store

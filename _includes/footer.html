@@ -1,40 +1,6 @@
-<footer class="page-footer {{ site.footer-color }}">
-    <div class="container">
-      <div class="row">
-        <div class="col l4 s12">
-          <h5 class="white-text">关于图书馆</h5>
-          <p class="grey-text text-lighten-4">
-              MaxPanda的个人博客<br/>收录一切博客，文章与奇思妙想
-          </p>
-        </div>
-
-        <div class="col l4 s12 right">
-          <h5 class="white-text">相关链接</h5>
-          <ul>
-          <div class="col">
-            {% if site.github_username %}
-            <li><a href="https://github.com/{{ site.github_username }}" class="white-text text-lighten-3 btn waves-effect waves-light {{ site.footer-button-color }} lighten-3"><i class="mdi mdi-github"></i></a></li>
-            {% endif %}
-            {% if site.googleplus_username %}
-            <li><a href="https://t.me/joinchat/S0pi6ojEfTw59VLv" class="white-text text-lighten-3 btn waves-effect waves-light {{ site.footer-button-color }} lighten-3"><i class="mdi mdi-telegram"></i></a></li>
-            {% endif %}
-            {% if site.twitter_username %}
-            <li><a href="https://twitter.com/{{ site.twitter_username }}" class="white-text text-lighten-3 btn waves-effect waves-light {{ site.footer-button-color }} lighten-3"><i class="mdi mdi-twitter"></i></a></li>
-            {% endif %}
-          </div>
-          <div class="col">
-            <li><a href="https://space.bilibili.com/1398477" class="white-text text-lighten-3 btn waves-effect waves-light white lighten-3"><img src="https://www.bilibili.com/favicon.ico" height="18.7"></a></li>
-            <li><a href="https://hexadecimaaal.github.io/" class="white-text text-lighten-3 btn waves-effect waves-light white lighten-3"><img src="https://hexadecimaaal.github.io/favicon.ico" height="18.7"></a></li>
-          </div>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        版权所有 © {{ site.author }}，遵循<a class="{{ site.footer-link-color }}" href="https://creativecommons.org/licenses/by-sa/4.0/"> CC BY-SA 4.0</a>许可证进行授权，转载请附链接出处及本说明 由<a class="{{ site.footer-link-color }}" href="http://jekyllrb.com/">Jekyll</a>提供技术支持.
-        <a class="btn waves-effect waves-light {{ site.footer-button-color }} lighten-1 right white-text" href="mailto:admaxpanda@outlook.com" >联系我</a>
-      </div>
-    </div>
-  </footer>
-
+<div class="footer-copyright">
+  <span class="footer-copyright-text float-left">Copyright &copy; {{ site.time | date: '%Y' }}. {{ site.domain }}.</span>
+  <span class="footer-copyright-text float-right">
+    Powered by <a href="https://jekyllrb.com/">Jekyll</a>, themed by <a href="https://github.com/ghosind/Jekyll-Paper">Jekyll-Paper</a>.
+  </span>
+</div>

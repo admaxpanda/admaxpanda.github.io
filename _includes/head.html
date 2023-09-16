@@ -1,19 +1,24 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <meta name="theme-color" content="{{ site.head-theme-color }}">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{% seo %}
+{% if site.keywords or page.tags %}
+<meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ','}}{% else %}{{ site.keywords | join: ',' }}{% endif %}" />
+{% endif %}
+<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" />
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/favicon.ico"/>
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/base.css" />
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/highlight.css" />
 
-  <link rel="shortcut icon" href="{{ '/favicon.ico' | prepend: site.baseurl | prepend: site.url }}">
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.head-title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-
-  <link rel="stylesheet" href="{{ '/lib/materialize/css/materialize.min.css' | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
-  <link media="all" rel="stylesheet" type="text/css" href="{{ '/lib/mdi/css/materialdesignicons.min.css' | prepend: site.baseurl }}" >
-  <link rel="stylesheet" href="{{ '/lib/material-scrolltop/material-scrolltop.css' | prepend: site.baseurl }}">
-
-  {% include check.html %}
-</head>
+<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+{% if site.analytics %}{% include analytics.html %}{% endif %}
+{% if site.mathjax %}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async ></script>
+{% endif %}
+{% if site.mermaid %}
+<script src="{{ site.baseurl }}/assets/script/jekyllpaper.js" async ></script>
+<script src="https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js" onload="javascript:loadMermaid();" async></script>
+{% endif %}

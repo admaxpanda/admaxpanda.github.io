@@ -1,81 +1,105 @@
-Materialize - jekyll
-==============
+# Jekyll-Paper
 
+![Jekyll-Paper](./favicon.ico)
 
-## Introducton
+English | [简体中文](./README-CN.md)
 
-This jekyll theme is based on [materialize](http://materializecss.com).
-(NOTE: this theme is only made for my own, but you can modify it freely.)
+Jekyll Paper is a simple Jekyll theme, and it is aim to helping you to create your own blog by the easiest way.
 
-[Open demo](https://mumuxme.github.io/materialize-jekyll/)
+Unfortunately, Jekyll Paper implement the category page by 'jekyll-archive' plugin, and GitHub Pages does not support it. So, this project is for self-host blog, and the Github Pages version is also available in [Jekyll Paper for Github][jekyll-paper-github].
 
+This is a [demo website](https://www.ghosind.com) for Jekyll Paper.
 
-## Getting start
+## Features
 
-#### Install
+- Responsive
+- Paginate
+- RSS
+- Sitemap
+- Custom 404 page
+- SASS
+- Internationalization
+- Configurable navigation menu
+- Categories Index
+- SEO optimization
+- Mathematics (MathJax)
+- Diagrams (Mermaid)
+- Comments (Disqus)
 
-You may need some dev headers, for debian/linux, just run:
+## Getting Start
 
+Jekyll Paper is easy to create your own blog. You can create your blog by five steps only!
+
+1. `$ gem install bundler jekyll`
+2. `$ git clone git@github.com:ghosind/Jekyll-Paper.git`
+3. `$ cd Jekyll-Paper`
+4. `Jekyll-Paper $ bundle install`
+5. `Jekyll-Paper $ bundle exec jekyll serve`
+
+## Add New Posts
+
+You can add new posts at any time after you had your own blog. Create a new post need to add a new file in "_posts" directory, and the file name must follow the convention `YYYY-MM-DD-name-of-post.md`.
+
+## Custom Navigation Menu
+
+You can add or update navigation menu items in `_data/menus.yml` file. In the configuration file, you need set title and URL for every navigation menu item.
+
+### Example
+
+```yml
+- title: "Index"
+  url:   ""
+
+- title: "Github"
+  absoluteUrl: true
+  url: "https://github.com/john_doe"
+
+- title: "About"
+  url:   "about"
 ```
-# apt-get install liblzma-dev zlib1g-dev
-```
 
-(Other dependencies may also needed.)
+## Supported Languages
 
-```
-$ git clone https://github.com/mumuxme/materialize-jekyll
-$ cd materialize-jekyll
-$ bundle install
-```
+Jekyll Paper has supported the following languages, please set language in `language` section of `_config.yml` file (default `language: en`). I'm anticipating you to help me improve the quality of translations and add more languages. The languages list by alphabets of its language code.
 
-#### Run
+- English
+- Deutsche (German)
+- Español (Spanish)
+- Français (French)
+- 日本語 (Japanese)
+- Português (Portuguese)
+- 简体中文 (Simplified Chinese)
+- 繁體中文 (Traditional Chinese)
+- 한국어 (Korean)
 
-1. Modify `_config.yml`, `about.md` and other(whatever you need).
-2. You can add a `favicon.ico` file in the project root directory.
-3. If you want to use google analytics, add your `google-analytics.js` into `js` directory.
+## Screenshots
 
-Then:
+The home page:
 
-```
-$ bundle exec jekyll s
+![Index](./assets/images/index-screenshot.png)
 
-# or start with draft
-$ bundle exec jekyll s --drafts
-```
+The post page:
 
-## Or start with docker
+![Post](./assets/images/post-screenshot.png)
 
-```
-cd materialize-jekyll
+The category page:
 
-# export GEM_MIRROR=mirror.https://rubygems.org
-export GEM_MIRROR='Your-ruby-gem-mirror'
+![Category](./assets/images/category-screenshot.png)
 
-make build
-make run
-```
+The home page in mobile version:
 
-
-## Other
-
-#### Emoji
-
-You can use GitHub-flavored emoji. See [emoji cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/)
-
-#### TODO
-
-- Add comment. (???)
-- Add options to choose self host or cdn.
-
+![Mobile](./assets/images/mobile-screenshot.png)
 
 ## License
 
-[GNU GPL v3](http://www.gnu.org/licenses/).
+Jekyll Paper was released under MIT license.
 
-Others:
+## Contributing
 
-- jquery: <https://jquery.com>
-- materialize: <http://materializecss.com>
-- material-scrolltop: [bartholomej/material-scrolltop](https://github.com/bartholomej/material-scrolltop)
-- material design icon: [Templarian/MaterialDesign](https://github.com/Templarian/MaterialDesign) or <https://materialdesignicons.com/getting-started>
-- GitHub-flavored emoji plugin: [jemoji](https://github.com/jekyll/jemoji)
+If you would like to make Jekyll Paper better, you can create a new pull request in [Jekyll Paper Github Page][jekyll-paper].
+
+If you have any questions or suggestions, you can create an issue on [Jekyll Paper Issues][jekyll-paper-issues].
+
+[jekyll-paper]: https://github.com/ghosind/Jekyll-Paper
+[jekyll-paper-github]: https://github.com/ghosind/Jekyll-Paper-Github
+[jekyll-paper-issues]: https://github.com/ghosind/Jekyll-Paper/issues

@@ -1,67 +1,83 @@
+# Welcome to Jekyll-Paper!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Your title
+email: your-email@example.com
+name: Your name
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here.
+keywords: [Your keywords]
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+domain: "example.com" # the domain name for your site, e.g. example.com
+language: en
+# Supported languages list:
+# en: English
+# de: Deutsche (German)
+# es: Español (Spanish)
+# fr: Français (French)
+# ja: 日本語 (Japanese)
+# pt: Português (Portuguese)
+# zh-cn: 简体中文 (Simplified Chinese)
+# zh-tw: 繁體中文 (Traditional Chinese)
+# ko : 한국어(Korean)
 
-author: MaxPanda
-email: admaxpanda@outlook.com
-twitter_username: admaxpanda
-github_username:  admaxpanda
-googleplus_username: admaxpanda
+analytics:   # the Google Analytics property ID, e.g. UA-XXXXX-Y
 
-head-title: 亚特兰蒂斯联盟图书馆
-title: 亚特兰蒂斯联盟图书馆
+paginate: 25
+paginate_path: "/page:num/"
 
-baseurl: ""    # the subpath of your site, "/blog"
-url: ""
+comments: false  # enable comments
+disqus:          # disqus account
 
-# footer 
-description: "I know that what I'm doing looks stupid, but I'm a big boy and really want to do this."
+mathjax: true # Mathematics
+mermaid: true # Diagrams
 
-favo: "天变不足畏，祖宗不足法，人言不足恤"
-descrpt: ""
-
-
-#
-# Build settings
-#
-
-#exclude: [vendor]
-
-markdown: kramdown
-highlighter: rouge
-
-kramdown:
-  input: GFM
-  hard_wrap: false
-  highlight: true
-  auto_ids:  true
+permalink: /:year/:month/:day/:title
 
 sass:
-  style: compressed
+  sass_dir: _sass
+  style: expanded # compressed, compact, expanded or compressed
 
-permalink: /posts/:categories/:title.html
+# Category settings
+jekyll-archives:
+  enabled: 
+    - categories
+    - tags
+  layout: archive
+  permalinks:
+    category: /category/:name/
+    tag: /tag/:name/
 
-paginate: 7
-#paginate_path: 'page/:num'
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-seo-tag
 
-gems: [jekyll-paginate, jekyll-last-modified-at, jemoji]
-
-
-#
-# Custom
-#
-
-# Color
-# All css class, see: http://materializecss.com/color.html
-header-color: "orange lighten-1"
-head-theme-color: "#ffa726"     # MUST in hex format, may the same as header-color. This color is for android chrome browser.
-
-footer-color: "orange lighten-1"
-footer-button-color: "orange lighten-2"
-footer-link-color: "blue-text text-accent-1"
-
-share-button-color: "blue"
-share-button-small-color: ""
-
-
-##
-#excerpt_separator: <!-- excerpt_end -->       # for post.excerpt
-
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
